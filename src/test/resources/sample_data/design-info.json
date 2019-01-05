@@ -1,0 +1,8 @@
+{
+  "sampleData": {
+    "cb33d878-1594-4a34-bd85-d417c69d37a6": {},
+    "bee62350-4b4c-4ba9-9472-aa36e1b04e0c": {
+      "payload": "sample_data/getProductListResponse.xml"
+    }
+  }
+}

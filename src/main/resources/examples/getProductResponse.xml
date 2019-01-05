@@ -1,0 +1,194 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <ns2:getProductListResponse xmlns:ns2="http://mm.io/meetup/product-ws">
+         <ns2:product>
+            <ns2:productId>b6c0b6bea69c722939585baeac73c13d</ns2:productId>
+            <ns2:sku>pp5006380337</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Essential Pull On Capri Pant</ns2:productName>
+            <ns2:description>You'll return to our Alfred Dunner pull-on capris again and again when you want an updated, casual look and all the comfort you love. ¬† elastic waistband approx. 19-21" inseam slash pockets polyester washable imported ¬† ¬† ¬†</ns2:description>
+            <ns2:vendorId>VEND-123</ns2:vendorId>
+            <ns2:salePrice>24.16</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>93e5272c51d8cce02597e3ce67b7ad0a</ns2:productId>
+            <ns2:sku>pp5006380337</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Essential Pull On Capri Pant</ns2:productName>
+            <ns2:description>You'll return to our Alfred Dunner pull-on capris again and again when you want an updated, casual look and all the comfort you love. ¬† elastic waistband approx. 19-21" inseam slash pockets polyester washable imported ¬† ¬† ¬†</ns2:description>
+            <ns2:vendorId>VEND-124</ns2:vendorId>
+            <ns2:salePrice>24.16</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>013e320f2f2ec0cf5b3ff5418d688528</ns2:productId>
+            <ns2:sku>pp5006380337</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Essential Pull On Capri Pant</ns2:productName>
+            <ns2:description>You'll return to our Alfred Dunner pull-on capris again and again when you want an updated, casual look and all the comfort you love. ¬† elastic waistband approx. 19-21" inseam slash pockets polyester washable imported ¬† ¬† ¬†</ns2:description>
+            <ns2:vendorId>VEND-125</ns2:vendorId>
+            <ns2:salePrice>24.16</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>505e6633d81f2cb7400c0cfa0394c427</ns2:productId>
+            <ns2:sku>pp5006380337</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Essential Pull On Capri Pant</ns2:productName>
+            <ns2:description>You'll return to our Alfred Dunner pull-on capris again and again when you want an updated, casual look and all the comfort you love. ¬† elastic waistband approx. 19-21" inseam slash pockets polyester washable imported ¬† ¬† ¬†</ns2:description>
+            <ns2:vendorId>VEND-126</ns2:vendorId>
+            <ns2:salePrice>24.16</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>d969a8542122e1331e304b09f81a83f6</ns2:productId>
+            <ns2:sku>pp5006380337</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Essential Pull On Capri Pant</ns2:productName>
+            <ns2:description>You'll return to our Alfred Dunner pull-on capris again and again when you want an updated, casual look and all the comfort you love. ¬† elastic waistband approx. 19-21" inseam slash pockets polyester washable imported ¬† ¬† ¬†</ns2:description>
+            <ns2:vendorId>VEND-127</ns2:vendorId>
+            <ns2:salePrice>24.16</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>cf73bb2bd93bbd6e1bdf48d399992270</ns2:productId>
+            <ns2:sku>pp5006380337</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Essential Pull On Capri Pant</ns2:productName>
+            <ns2:description>You'll return to our Alfred Dunner pull-on capris again and again when you want an updated, casual look and all the comfort you love. ¬† elastic waistband approx. 19-21" inseam slash pockets polyester washable imported ¬† ¬† ¬†</ns2:description>
+            <ns2:vendorId>VEND-128</ns2:vendorId>
+            <ns2:salePrice>24.16</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>8ffd0ef4fcaf1a82fb514aba5d20e05b</ns2:productId>
+            <ns2:sku>pp5006790247</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring 3/4 Sleeve Leaf Print Top</ns2:productName>
+            <ns2:description>For easygoing style you'll love, wear our stretch-knit print top. v-neck 3/4 sleeves 26¬æ" length cotton/spandex machine wash, line dry imported</ns2:description>
+            <ns2:vendorId>VEND-129</ns2:vendorId>
+            <ns2:salePrice>39.16</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>4d9337e3c8f974d3c420cdc5c58b3fc3</ns2:productId>
+            <ns2:sku>pp5007090172</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring 3/4-Sleeve Leaf Striped Tee - Plus</ns2:productName>
+            <ns2:description>Spring is in the air with our 3/4-sleeve leaf striped tee, which is comfortable, versatile and stylish, making it an easy addition to your warm-weather wardrobe. v-neck pullover 26¬æ" length cotton/spandex machine wash, line dry imported</ns2:description>
+            <ns2:vendorId>VEND-130</ns2:vendorId>
+            <ns2:salePrice>70.1</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>44f8f8f108c6856acf9630dd1d78516d</ns2:productId>
+            <ns2:sku>pp5007080134</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring 3/4-Sleeve Watercolor Print Shirt or Pull-On Cargo Capris</ns2:productName>
+            <ns2:description/>
+            <ns2:vendorId>VEND-131</ns2:vendorId>
+            <ns2:salePrice>62.8574</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>8d1d057f5f808c10ce243c222ab0ef6e</ns2:productId>
+            <ns2:sku>pp5007080134</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring 3/4-Sleeve Watercolor Print Shirt or Pull-On Cargo Capris</ns2:productName>
+            <ns2:description/>
+            <ns2:vendorId>VEND-132</ns2:vendorId>
+            <ns2:salePrice>62.8574</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>f3e02c48f16b56e8c1f126c8fe762812</ns2:productId>
+            <ns2:sku>pp5007080134</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring 3/4-Sleeve Watercolor Print Shirt or Pull-On Cargo Capris</ns2:productName>
+            <ns2:description/>
+            <ns2:vendorId>VEND-133</ns2:vendorId>
+            <ns2:salePrice>62.8574</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>5abf9d28e9e0404369ece10807d99d0e</ns2:productId>
+            <ns2:sku>pp5006790242</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring Capris</ns2:productName>
+            <ns2:description>Pull on a pair of our casual capris and be footloose and fancy-free. flat front straight leg high rise back elastic side pockets 16 7/8-19" inseam cotton/polyester/spandex washable imported</ns2:description>
+            <ns2:vendorId>VEND-134</ns2:vendorId>
+            <ns2:salePrice>34.81</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>82d8a9a627e55ba97a1051068c9823e7</ns2:productId>
+            <ns2:sku>pp5006790242</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring Capris</ns2:productName>
+            <ns2:description>Pull on a pair of our casual capris and be footloose and fancy-free. flat front straight leg high rise back elastic side pockets 16 7/8-19" inseam cotton/polyester/spandex washable imported</ns2:description>
+            <ns2:vendorId>VEND-135</ns2:vendorId>
+            <ns2:salePrice>34.81</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>7b16da6eaeca0ae2d107e712cfe5141d</ns2:productId>
+            <ns2:sku>pp5006790242</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring Capris</ns2:productName>
+            <ns2:description>Pull on a pair of our casual capris and be footloose and fancy-free. flat front straight leg high rise back elastic side pockets 16 7/8-19" inseam cotton/polyester/spandex washable imported</ns2:description>
+            <ns2:vendorId>VEND-136</ns2:vendorId>
+            <ns2:salePrice>34.81</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>dc414a69fee993fd20d74a979dfea23d</ns2:productId>
+            <ns2:sku>pp5006790242</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring Capris</ns2:productName>
+            <ns2:description>Pull on a pair of our casual capris and be footloose and fancy-free. flat front straight leg high rise back elastic side pockets 16 7/8-19" inseam cotton/polyester/spandex washable imported</ns2:description>
+            <ns2:vendorId>VEND-137</ns2:vendorId>
+            <ns2:salePrice>34.81</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>3c291110238ee460390c7002e4622ade</ns2:productId>
+            <ns2:sku>pp5006790695</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring Short-Sleeve Burnout Top and Necklace</ns2:productName>
+            <ns2:description>Timeless and stylish, our short-sleeve burnout top is an easy choice for looking your best. A coordinating necklace completes the look. includes necklace crewneck short sleeves shell: rayon/polyester inner: polyester washable imported</ns2:description>
+            <ns2:vendorId>VEND-138</ns2:vendorId>
+            <ns2:salePrice>43.51</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+         <ns2:product>
+            <ns2:productId>5d8646dbb6d4561dd5f9176f2632edc3</ns2:productId>
+            <ns2:sku>pp5006790695</ns2:sku>
+            <ns2:productName>Alfred Dunner¬Æ Feels Like Spring Short-Sleeve Burnout Top and Necklace</ns2:productName>
+            <ns2:description>Timeless and stylish, our short-sleeve burnout top is an easy choice for looking your best. A coordinating necklace completes the look. includes necklace crewneck short sleeves shell: rayon/polyester inner: polyester washable imported</ns2:description>
+            <ns2:vendorId>VEND-139</ns2:vendorId>
+            <ns2:salePrice>43.51</ns2:salePrice>
+            <ns2:qtyInStock>10</ns2:qtyInStock>
+            <ns2:qtyInOrder>10</ns2:qtyInOrder>
+            <ns2:active>true</ns2:active>
+         </ns2:product>
+      </ns2:getProductListResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

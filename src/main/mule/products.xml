@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="6fb3cdac-7400-4460-b6e7-d7667d8809cf">
+		<http:request-connection host="localhost" port="8080" />
+	</http:request-config>
+	<flow name="getProductsFlow" doc:id="31dffef2-4269-487e-a5e2-3a0d5bdae13f" >
+		<logger level="INFO" doc:name="Logger" doc:id="99f81afa-1f60-47b1-a725-f7dc8f11b852" />
+		<ee:transform doc:name="Build Request Message" doc:id="cb33d878-1594-4a34-bd85-d417c69d37a6" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/xml
+ns prod http://mm.io/meetup/product-ws
+ns soapenv http://schemas.xmlsoap.org/soap/envelope/ 
+---
+soapenv#Envelope: {
+	soapenv#Header:{
+		
+	},
+	soapenv#Body:{
+		prod#getProductListRequest:{
+			
+		}
+	}
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<http:request method="GET" doc:name="Request" doc:id="fc6586cf-8c6a-4cab-93e0-0e40c84f0b03" config-ref="HTTP_Request_configuration" path="ws/"/>
+		<ee:transform doc:name="Build Response Message" doc:id="bee62350-4b4c-4ba9-9472-aa36e1b04e0c" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+ns SOAP_ENV http://schemas.xmlsoap.org/soap/envelope/
+ns ns2 http://mm.io/meetup/product-ws
+---
+payload.SOAP_ENV#Envelope.SOAP_ENV#Body.ns2#getProductListResponse.*ns2#product map {
+	productId : $.productId,
+	sku : $.sku,
+	productName: $.productName,
+	description: $.description,
+	vendorId: $.vendorId,
+//	categoryId: $.categoryId,
+    unitPrice:$.salePrice,
+    qtyInStock:$.qtyInOrder,
+    qtyInOrder:$.qtyInOrder,
+    active:$.active
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="efc492b7-5959-4f08-b54e-506aa7c365bb" />
+	</flow>
+</mule>

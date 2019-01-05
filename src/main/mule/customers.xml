@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="getCustomersFlow" doc:id="1193d667-2466-4814-8d06-1e263da47e3e" >
+		<logger level="INFO" doc:name="Logger" doc:id="b22833e5-bf97-4c68-9c1c-44f416e5317d" />
+		<logger level="INFO" doc:name="Logger" doc:id="47cdc290-da80-42c1-b72f-1310bb83a89e" />
+	</flow>
+	<flow name="addCustomerFlow" doc:id="3687ca31-66a7-4b4c-9a58-60cc8b7bf2d7" >
+		<logger level="INFO" doc:name="Logger" doc:id="caa57586-2afd-4d40-a528-0a365e71b7f5" />
+		<logger level="INFO" doc:name="Logger" doc:id="1f56c6c6-e152-4f38-ba56-18fae72b46f6" />
+	</flow>
+</mule>

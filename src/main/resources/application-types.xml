@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="productInput" format="xml">
+      <types:example format="xml" element="{http://mm.io/meetup/product-ws}getProductListRequest" location="examples/getProducts.xml"/>
+    </types:type>
+    <types:type name="productOutput" format="xml">
+      <types:example format="xml" element="{http://schemas.xmlsoap.org/soap/envelope/}Envelope" location="examples/getProductResponse.xml"/>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#cb33d878-1594-4a34-bd85-d417c69d37a6"/>
+  <types:enrichment select="#bee62350-4b4c-4ba9-9472-aa36e1b04e0c">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="productOutput"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

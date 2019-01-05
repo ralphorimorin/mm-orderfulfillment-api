@@ -1,0 +1,572 @@
+#%RAML 1.0
+title: mm-orderfulfillment-api
+description: This is an API for MuleSoft Meetup Order Fulfillment system
+version: '1.0'
+mediaType: application/json
+protocols:
+  - HTTP
+baseUri: 'http://localhost:8081/{title}/{version}'
+#securitySchemes: 
+#  basicAuth:
+#    description: 
+#    type: Basic Authentication
+#securedBy: basicAuth
+types:
+  orderObject:
+    type: object
+    properties: 
+      orderId:
+        required: true
+        example: ORD-12345
+        description: Order ID
+        type: string
+      customerId:
+        required: true
+        example: ID-12345
+        description: Customer ID
+        type: string
+      status:
+        required: true
+        description: Order / Fulfilment Status
+        enum: [ORDER_INITIATED,ORDER_SUBMITTED,PARTIALLY_FULFILLED,FULFILLED,SHIPPED_TO_ADDRESS]
+      dateFulfilled:
+        required: true
+        example: 2018-12-12
+        description: Date Fulfilled
+        type: date-only
+      orderDate:
+        required: true
+        example: 2018-12-12
+        description: Order Date
+        type: date-only
+      shippedDate:
+        required: true
+        example: 2018-12-25
+        description: Shipped Date
+        type: date-only
+      taxFederal:
+        required: false
+        example: 0.00
+        description: Tax Federal
+        type: number
+      taxState:
+        required: false
+        example: 0.00
+        description: Tax State
+        type: number
+      taxLocal:
+        required: false
+        example: 0.00
+        description: Tax Local
+        type: number
+      subTotalBeforeTax:
+        required: false
+        example: 0.00
+        description: Total before tax
+        type: number
+      shipToName:
+        required: false
+        example: shipToName
+        description: Ship to name
+        type: string
+      shipToStreet:
+        required: false
+        example: shipToStreet
+        description: Ship to street
+        type: string
+      shipToCity:
+        required: false
+        example: shipToCity
+        description: Ship to city
+        type: string
+      shipToState:
+        required: false
+        example: shipToState
+        description: Ship to state
+        type: string
+      shipToCountry:
+        required: false
+        example: shipToCountry
+        description: Ship to country
+        type: string
+      shipToZipCode:
+        required: false
+        example: 43230
+        description: Shipt to zipcode
+        type: number
+      shipToPhone:
+        required: false
+        example: 4444444444
+        description: Ship to Phone
+        type: number
+      billToName:
+        required: false
+        example: billToName
+        description: Bill to name
+        type: string
+      billToStreet:
+        required: false
+        example: billToStreet
+        description: Bill to street
+        type: string
+      billToCity:
+        required: false
+        example: billToCity
+        description: Bill to city
+        type: string
+      billToState:
+        required: false
+        example: billToState
+        description: Bill to state
+        type: string
+      billToCountry:
+        required: false
+        example: billToCountry
+        description: Bill to country
+        type: string
+      billToZipCode:
+        required: false
+        example: 43230
+        description: Bill to zipcode
+        type: number
+      billToPhone:
+        required: false
+        example: 4444444444
+        description: Bill to phone
+        type: number
+  orderItem:
+    type: object
+    properties: 
+      orderId:
+        required: true
+        example: ORD-12345
+        description: Order ID
+        type: string
+      vendorId:
+        required: true
+        example: VEND-12345
+        description: Vendor ID
+        type: string
+      itemSeq:
+        required: true
+        example: 1
+        description: Vendor ID
+        type: number
+      itemNo:
+        required: true
+        example: item-1
+        description: Item no
+        type: string
+      productId:
+        required: true
+        example: PROD-1
+        description: Product ID
+        type: string
+      unitPrice:
+        required: true
+        example: 100.00
+        description: Unit price
+        type: number
+      quantity:
+        example: 10
+        description: Quantity
+        type: number
+      discount:
+        example: 0.00
+        description: Discount
+        type: number
+      totalPriceExtended:
+        example: 1000.00
+        description: Total Price Extended
+        type: number
+  orderItemPost:
+    type: object
+    properties: 
+      productId:
+        example: PROD-1
+        description: Product ID
+        type: string
+      unitPrice:
+        example: 100.00
+        description: Unit Price
+        type: number
+      quantity:
+        example: 10
+        description: Quantity
+        type: number
+      discount:
+        example: 0.00
+        description: Discount
+        type: number
+  customerObjectList:
+    type: array
+    items: customerObject
+  customerObject:
+    type: object
+    properties: 
+      customerId:
+        example: ID-12345
+        description: Customer ID
+        type: string
+      companyName:
+        example: companyName
+        description: Company Name of Vendor
+        type: string
+      contactName:
+        example: contactName
+        description: Customer Contact Name
+        type: string
+      street:
+        example: street
+        description: Street
+        type: string
+      city:
+        example: city
+        description: City
+        type: string
+      state:
+        example: state
+        description: State
+        type: string
+      country:
+        example: country
+        description: Country
+        type: string
+      zipCode:
+        example: 43230
+        description: Zipcode
+        type: number
+      phone:
+        example: 4444444444
+        description: Phone
+        type: number
+  vendorObject:
+    type: object
+    properties:
+      vendorId:
+        example: sid
+        description: Vendor ID
+        type: string
+      vendorName:
+        example: name
+        description: Name of Vendor
+        type: string
+      street:
+        example: street
+        description: Street
+        type: string
+      city:
+        example: city
+        description: city
+        type: string
+      state:
+        example: billToState
+        description: State
+        type: string
+      country:
+        example: country
+        description: Country
+        type: string
+      zipCode:
+        example: 43230
+        description: Zipcode
+        type: number
+      phone:
+        example: 4444444444
+        description: Phone
+        type: number
+  productObject:
+    type: object
+    properties: 
+      productId:
+        example: PROD-1
+        description: Product ID
+        type: string
+      sku:
+        example: sku
+        description: SKU
+        type: string
+      productName:
+        example: productName
+        description: Product Name
+        type: string
+      description:
+        example: description
+        description: Description
+        type: string
+      vendorId:
+        example: VEND-12345
+        description: Vendor ID
+        type: string
+      categoryId:
+        example: CAT-12345
+        description: Category ID
+        type: string
+      unitPrice:
+        example: 1.00
+        description: Unit Price
+        type: number
+      qtyInStock:
+        example: 1
+        description: Quantity in Stock
+        type: number
+      qtyInOrder:
+        example: 1
+        description: Ordered quantity
+        type: number
+      active:
+        description: Product if active
+        type: boolean
+        default: true
+  productcategoriesObject:
+    type: object
+    properties: 
+      categoryId:
+        example: CAT-1234
+        description: Category ID
+        type: string
+      categoryName:
+        example: categoryName
+        description: Category Name
+        type: string
+      description:
+        example: description
+        description: Description of Category Name
+        type: string
+      picture:
+        example: picture
+        description: General Picture of Category
+        type: string
+  shipperObject:
+    type: object
+    properties: 
+      shipperId:
+        example: sid
+        description: Shippers ID
+        type: string
+      companyName:
+        example: companyName
+        description: Company Name of Vendor
+        type: string
+      phone:
+        example: 4444444444
+        description: Phone number of Vendor
+        type: number
+/orders:
+  get:
+    queryParameters:
+      searchBy:
+        example: 1d,cid
+        type: string
+      id:
+        example: Example
+        description: Order ID use to filter specific Order
+        type: string
+      cid:
+        example: customerId
+        description: Customer ID associated to the Order
+        type: string
+    responses: 
+      200: 
+        body:
+          application/json:
+            type: array
+            items: orderObject
+  post:
+    body:
+      application/json:
+        description: To create new order
+        type: orderObject
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: object
+            properties: 
+              orderId: string
+              status:
+                enum: [CREATED]
+  /{orderId}:
+    /items:
+      get:
+        queryParameters: 
+          searchBy:
+            required: false
+            example: id,itemSeq,itemNo,productId
+            description: Use to specify field(s) for filtering
+            type: string
+          id:
+            example: ORD-12345
+            description: Order ID
+            type: string
+          itemSeq:
+            example: 1
+            description: Vendor ID
+            type: number
+          itemNo:
+            example: item-1
+            description: Item no
+            type: string
+          productId:
+            example: PROD-1
+            description: Product ID
+            type: string
+        responses: 
+          200:
+            body: 
+              application/json:
+                type: array
+                items: orderItem
+      post:
+        body: 
+          application/json:
+            type: array
+            items: orderItemPost
+/shippers:
+  get:
+    queryParameters:
+      searchBy:
+        required: false
+        example: id,companyName,Phone
+        description: Use to specify field(s) for filtering
+        type: string
+      id:
+        required: false
+        example: sid
+        description: Shippers ID
+        type: string
+      companyName:
+        example: companyName
+        description: Company Name of Shipper
+        type: string
+      phone:
+        example: 4444444444
+        description: Phone number of Shipper
+        type: number
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: array
+            items: shipperObject
+/customers:
+  get:
+    queryParameters: 
+      searchBy:
+        required: false
+        example: id,name,Phone
+        description: Use to specify field(s) for filtering
+        type: string
+      id:
+        required: false
+        example: sid
+        description: Customer ID
+        type: string
+      name:
+        example: name
+        description: Name of Customer
+        type: string
+      phone:
+        example: 4444444444
+        description: Phone number of Customer
+        type: number
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: customerObjectList 
+  post:
+    body: 
+      application/json:
+        type: customerObject
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: object
+            properties: 
+              customerId: string
+/vendors:
+  get:
+    queryParameters: 
+      searchBy:
+        required: false
+        example: id,name,Phone
+        description: Use to specify field(s) for filtering
+        type: string
+      id:
+        required: false
+        example: sid
+        description: Vendor ID
+        type: string
+      name:
+        example: name
+        description: Name of Vendor
+        type: string
+      phone:
+        example: 4444444444
+        description: Phone number of Vendor
+        type: number
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: array
+            items: vendorObject
+/products:
+  get:
+    queryParameters: 
+      searchBy:
+        required: false
+        example: id,name,keyword,sku
+        description: Use to specify field(s) for filtering
+        type: string
+      id:
+        required: false
+        example: sid
+        description: Vendor ID
+        type: string
+      name:
+        required: false
+        example: name
+        description: Name of Product
+        type: string
+      keyword:
+        required: false
+        example: keyword
+        description: Keyword use to search product(s)
+        type: string
+      sku:
+        required: false
+        example: sku-12345
+        description: SKU of the product
+        type: string
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: array
+            items: productObject
+/productcategories:
+  get:
+    queryParameters: 
+      searchBy:
+        required: false
+        example: id,name
+        description: Use to specify field(s) for filtering
+        type: string
+      id:
+        required: false
+        example: sid
+        description: Product Category ID
+        type: string
+      name:
+        example: name
+        description: Product Category Name
+        type: string
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: array
+            items: productcategoriesObject

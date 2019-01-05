@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://mm.io/meetup/product-ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <prod:getProductListRequest>
+      </prod:getProductListRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
