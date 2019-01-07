@@ -125,6 +125,7 @@ output application/json
     </flow>
     <flow name="get:\customers:mm-orderfulfillment-api-config">
         <logger level="INFO" message="get:\customers:mm-orderfulfillment-api-config" />
+		<flow-ref doc:name="getCustomersFlow" doc:id="f54519ad-ef17-4ec9-8c5e-cca9ef0d75b8" name="getCustomersFlow"/>
     </flow>
     <flow name="get:\orders\(orderId)\items:mm-orderfulfillment-api-config">
         <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
@@ -152,11 +153,12 @@ output application/json
     </flow>
     <flow name="post:\customers:application\json:mm-orderfulfillment-api-config">
         <logger level="INFO" message="post:\customers:application\json:mm-orderfulfillment-api-config" />
+		<flow-ref doc:name="addCustomerFlow" doc:id="429f246a-be28-4251-a443-cf4ae7d230c0" name="addCustomerFlow"/>
     </flow>
     <flow name="post:\orders\(orderId)\items:application\json:mm-orderfulfillment-api-config">
-        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" doc:id="70b7aef8-7704-44e6-bae8-083cdad0418f">
             <ee:variables>
-                <ee:set-variable variableName="orderId">attributes.uriParams.orderId</ee:set-variable>
+                <ee:set-variable variableName="orderId"><![CDATA[attributes.uriParams.orderId]]></ee:set-variable>
             </ee:variables>
         </ee:transform>
         <logger level="INFO" message="post:\orders\(orderId)\items:application\json:mm-orderfulfillment-api-config" />

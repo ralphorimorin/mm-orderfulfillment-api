@@ -6,11 +6,11 @@ mediaType: application/json
 protocols:
   - HTTP
 baseUri: 'http://localhost:8081/{title}/{version}'
-#securitySchemes: 
-#  basicAuth:
-#    description: 
-#    type: Basic Authentication
-#securedBy: basicAuth
+# securitySchemes: 
+#   basicAuth:
+#     description: 
+#     type: Basic Authentication
+# securedBy: basicAuth
 types:
   orderObject:
     type: object
@@ -356,13 +356,16 @@ types:
   get:
     queryParameters:
       searchBy:
+        required: false
         example: 1d,cid
         type: string
       id:
+        required: false
         example: Example
         description: Order ID use to filter specific Order
         type: string
       cid:
+        required: false
         example: customerId
         description: Customer ID associated to the Order
         type: string
@@ -396,18 +399,22 @@ types:
             description: Use to specify field(s) for filtering
             type: string
           id:
+            required: false
             example: ORD-12345
             description: Order ID
             type: string
           itemSeq:
+            required: false
             example: 1
             description: Vendor ID
             type: number
           itemNo:
+            required: false
             example: item-1
             description: Item no
             type: string
           productId:
+            required: false
             example: PROD-1
             description: Product ID
             type: string
@@ -436,10 +443,12 @@ types:
         description: Shippers ID
         type: string
       companyName:
+        required: false
         example: companyName
         description: Company Name of Shipper
         type: string
       phone:
+        required: false
         example: 4444444444
         description: Phone number of Shipper
         type: number
@@ -463,10 +472,12 @@ types:
         description: Customer ID
         type: string
       name:
+        required: false
         example: name
         description: Name of Customer
         type: string
       phone:
+        required: false
         example: 4444444444
         description: Phone number of Customer
         type: number
@@ -500,10 +511,12 @@ types:
         description: Vendor ID
         type: string
       name:
+        required: false
         example: name
         description: Name of Vendor
         type: string
       phone:
+        required: false
         example: 4444444444
         description: Phone number of Vendor
         type: number
@@ -561,6 +574,7 @@ types:
         description: Product Category ID
         type: string
       name:
+        required: false
         example: name
         description: Product Category Name
         type: string

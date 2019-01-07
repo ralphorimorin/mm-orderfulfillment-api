@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:request-connection host="localhost" port="8080" />
 	</http:request-config>
 	<flow name="getProductsFlow" doc:id="31dffef2-4269-487e-a5e2-3a0d5bdae13f" >
-		<logger level="INFO" doc:name="Logger" doc:id="99f81afa-1f60-47b1-a725-f7dc8f11b852" />
+		<logger level="INFO" doc:name="Logger" doc:id="99f81afa-1f60-47b1-a725-f7dc8f11b852" message="About to call GET Product API"/>
 		<ee:transform doc:name="Build Request Message" doc:id="cb33d878-1594-4a34-bd85-d417c69d37a6" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
@@ -51,6 +51,6 @@ payload.SOAP_ENV#Envelope.SOAP_ENV#Body.ns2#getProductListResponse.*ns2#product 
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="efc492b7-5959-4f08-b54e-506aa7c365bb" />
+		<logger level="INFO" doc:name="Logger" doc:id="efc492b7-5959-4f08-b54e-506aa7c365bb" message="GET Product API successfull returned: #[payload]"/>
 	</flow>
 </mule>
