@@ -6,7 +6,7 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="6fb3cdac-7400-4460-b6e7-d7667d8809cf">
-		<http:request-connection host="localhost" port="8080" />
+		<http:request-connection host="${of.host}" port="${of.port}" />
 	</http:request-config>
 	<flow name="getProductsFlow" doc:id="31dffef2-4269-487e-a5e2-3a0d5bdae13f" >
 		<logger level="INFO" doc:name="Logger" doc:id="99f81afa-1f60-47b1-a725-f7dc8f11b852" message="About to call GET Product API"/>

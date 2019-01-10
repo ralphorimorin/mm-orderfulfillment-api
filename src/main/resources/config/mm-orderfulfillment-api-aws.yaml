@@ -1,0 +1,17 @@
+# API Listener
+api:
+ host: "0.0.0.0"
+ port: "8081"
+
+# API Requestion SOAP WS
+of:
+ host: "52.43.235.184"
+ port: "8080"
+
+# Database Info
+db:
+ host: "mm-db.cntd2hy9otw8.us-west-2.rds.amazonaws.com"
+ port: "3306"
+ username: "root"
+ password: "administrator"
+ database: "orderfulfillment"
